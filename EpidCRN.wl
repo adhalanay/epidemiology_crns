@@ -112,7 +112,7 @@ Hur4M[mat_]:=Module[{lm,ch,cot,co,H4,h4,ine},
 lm=mat//Length;
 ch=((-1)^lm * CharacteristicPolynomial[mat,\[Lambda]]//Factor);
 cot=CoefficientList[ch,\[Lambda]];
-co=Reverse[Drop[cot,-1]];
+co=Reverse[Drop[cot,-1]];(*co[[0]]=1 is lead coef*)
 H4={{co[[1]],1,0,0},
 {co[[3]],co[[2]],co[[1]],1},
 {0,co[[4]],co[[3]],co[[2]]},
@@ -123,6 +123,7 @@ H4[co_]:={{co[[1]],1,0,0},
 {co[[3]],co[[2]],co[[1]],1},
 {0,co[[4]],co[[3]],co[[2]]},
 {0,0,0,co[[4]]}};
+
 Hur5M[jac_]:=Module[{lm,ch,cot,co,H5,h5,ine},
 lm=jac//Length;
 ch=((-1)^lm * CharacteristicPolynomial[jac,\[Lambda]]//Factor);
@@ -241,16 +242,17 @@ elP[mod_,inf_]:=Module[{X,Xi,qv,ov,ngm,fv,eq},X=mod[[2]];Xi=X[[inf]];
  ov=Table[1,{j,Length[Xi]}];ngm=NGM[mod,inf];F=ngm[[4]];V=ngm[[5]];fv=ov . F;
  eq=(qv . F)*qv-qv*fv+(ov-qv) . V];
 
-RUR[mod_, ind_, cn_ : {}] (*ind is natural number*):= 
-Module[{dyn, var, par, elim,ratsub,pol,polc,rat1},
-       dyn = mod[[1]]/.cn; var = mod[[2]]; par = mod[[3]]; 
-       elim = Complement[Range[Length[var]], {ind}];
-       ratsub = Solve[Drop[Thread[dyn == 0], {ind}], var[[elim]]][[1]]//Normal;
-       pol = GroebnerBasis[Numerator[Together[dyn]], 
-         Append[par, var[[ind]]], var[[elim]],MonomialOrder->EliminationOrder];
-       polc=Collect[pol, var[[ind]]]; 
+RUR[mod_, ind_, cn_ : {}] (*ind is a list*):= 
+Module[{RHS, var, par, elim,ratsub,pol,polc,rat1},
+       RHS = mod[[1]]/.cn; var = mod[[2]]; par = mod[[3]]; 
+       elim = Complement[Range[Length[var]], ind];
+       ratsub = Solve[Delete[Thread[RHS == 0], List /@ind], 
+       var[[elim]]];
+       pol = GroebnerBasis[Numerator[Together[RHS//.ratsub]], 
+         Join[par, var[[ind]]], var[[elim]],
+         MonomialOrder->EliminationOrder]; 
        rat1=Append[(ratsub/.var[[ind]]->1),var[[ind]]->1];
-    {ratsub, polc,rat1}
+    {ratsub, pol,rat1}
       ]
       
 GBH[pol_,var_,sc_,cn_:{}]:=Module[{li,pa},
