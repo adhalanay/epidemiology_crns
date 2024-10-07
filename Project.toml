@@ -1,6 +1,7 @@
 [deps]
 Catalyst = "479239e8-5488-4da2-87a7-35f2df7eef83"
 DifferentialEquations = "0c46a032-eb83-5123-abaf-570d42b7fbaa"
+Graphs = "86223c79-3864-5bf0-83f7-82e725a168b6"
 IJulia = "7073ff75-c697-5162-941a-fcdaad2a7d2a"
 Latexify = "23fbe1c1-3f47-55db-b15f-69d7ec21a316"
 Nemo = "2edaba10-b0f1-5616-af89-8c11ac63239a"
