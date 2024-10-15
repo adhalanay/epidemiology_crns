@@ -581,9 +581,9 @@ version = "7.14.0"
 
 [[deps.DifferentiationInterface]]
 deps = ["ADTypes", "LinearAlgebra"]
-git-tree-sha1 = "5dc557ea58f472885021dc57cabab1de3817dd3c"
+git-tree-sha1 = "758ef234ab0b81071c195cd2ea155030d69c1ef8"
 uuid = "a0c0ee7d-e4b9-4e03-894e-1c5f64a51d63"
-version = "0.6.12"
+version = "0.6.13"
 
     [deps.DifferentiationInterface.extensions]
     DifferentiationInterfaceChainRulesCoreExt = "ChainRulesCore"
@@ -2819,9 +2819,9 @@ version = "0.2.2"
 
 [[deps.SymbolicUtils]]
 deps = ["AbstractTrees", "ArrayInterface", "Bijections", "ChainRulesCore", "Combinatorics", "ConstructionBase", "DataStructures", "DocStringExtensions", "DynamicPolynomials", "IfElse", "LinearAlgebra", "MultivariatePolynomials", "NaNMath", "Setfield", "SparseArrays", "SpecialFunctions", "StaticArrays", "SymbolicIndexingInterface", "TermInterface", "TimerOutputs", "Unityper"]
-git-tree-sha1 = "3927e02dc7648a45ec6aa592bcd8374094a44740"
+git-tree-sha1 = "04e9157537ba51dad58336976f8d04b9ab7122f0"
 uuid = "d1185830-fcd6-423d-90d6-eec64667417b"
-version = "3.7.1"
+version = "3.7.2"
 
     [deps.SymbolicUtils.extensions]
     SymbolicUtilsLabelledArraysExt = "LabelledArrays"
