@@ -2,7 +2,7 @@
 
 julia_version = "1.11.1"
 manifest_format = "2.0"
-project_hash = "cca6a37c790863da0268e29600d18c528a2a5981"
+project_hash = "39ac57bc055f69a9c9c84b159044aad5c08dd636"
 
 [[deps.ADTypes]]
 git-tree-sha1 = "eea5d80188827b35333801ef97a40c2ed653b081"
@@ -186,6 +186,12 @@ weakdeps = ["SparseArrays"]
 uuid = "2a0f44e3-6c83-55bd-87e4-b1978d98bd5f"
 version = "1.11.0"
 
+[[deps.BenchmarkTools]]
+deps = ["JSON", "Logging", "Printf", "Profile", "Statistics", "UUIDs"]
+git-tree-sha1 = "f1dff6729bc61f4d49e140da1af55dcd1ac97b2f"
+uuid = "6e4b80f9-dd63-53aa-95a3-0cdb28fa8baf"
+version = "1.5.0"
+
 [[deps.Bijections]]
 git-tree-sha1 = "d8b0439d2be438a5f2cd68ec158fe08a7b2595b7"
 uuid = "e2ed5e7c-b2de-5872-ae92-c73ca462fb04"
@@ -295,6 +301,14 @@ version = "14.4.1"
     HomotopyContinuation = "f213a82b-91d6-5c5d-acf7-10f1c761b327"
     StructuralIdentifiability = "220ca800-aa68-49bb-acd8-6037fa93a544"
 
+[[deps.CatalystNetworkAnalysis]]
+deps = ["Catalyst", "DynamicPolynomials", "Graphs", "Hecke", "HiGHS", "IterTools", "JuMP", "LinearAlgebra", "MixedSubdivisions", "ModelingToolkit", "MultivariatePolynomials", "Nemo", "Oscar", "PolynomialRoots", "ReactionNetworkImporters", "SBMLToolkit", "Satisfiability", "SparseArrays", "SymbolicUtils"]
+git-tree-sha1 = "2edba61a6139865bcdd7cb4d84a6c7a9b57ef7ba"
+repo-rev = "main"
+repo-url = "https://github.com/SciML/CatalystNetworkAnalysis.jl.git"
+uuid = "5fe4a9df-d2e2-44a6-8bda-0abe10269b5a"
+version = "0.1.0"
+
 [[deps.ChainRulesCore]]
 deps = ["Compat", "LinearAlgebra"]
 git-tree-sha1 = "3e4b134270b372f2ed4d4d0e936aabaefc1802bc"
@@ -310,6 +324,12 @@ deps = ["Static", "StaticArrayInterface"]
 git-tree-sha1 = "05ba0d07cd4fd8b7a39541e31a7b0254704ea581"
 uuid = "fb6a15b2-703c-40df-9091-08a04967cfa9"
 version = "0.1.13"
+
+[[deps.CodecBzip2]]
+deps = ["Bzip2_jll", "TranscodingStreams"]
+git-tree-sha1 = "e7c529cc31bb85b97631b922fa2e6baf246f5905"
+uuid = "523fee87-0ab8-5b00-afb7-3ecf72e48cfd"
+version = "0.8.4"
 
 [[deps.CodecZlib]]
 deps = ["TranscodingStreams", "Zlib_jll"]
@@ -1105,6 +1125,18 @@ weakdeps = ["GAP", "Polymake"]
     GAPExt = "GAP"
     PolymakeExt = "Polymake"
 
+[[deps.HiGHS]]
+deps = ["HiGHS_jll", "MathOptInterface", "PrecompileTools", "SparseArrays"]
+git-tree-sha1 = "02fad6652a24cd1356c5dc000c3cca297e13482a"
+uuid = "87dc4568-4c63-4d18-b0c0-bb2238e4078b"
+version = "1.12.1"
+
+[[deps.HiGHS_jll]]
+deps = ["Artifacts", "CompilerSupportLibraries_jll", "JLLWrappers", "Libdl", "Zlib_jll"]
+git-tree-sha1 = "cc963ae42b15ccd2536fb7a6254c0328b404347c"
+uuid = "8fd58aa0-07eb-5a78-9b36-339c94fd15ea"
+version = "1.8.1+0"
+
 [[deps.HostCPUFeatures]]
 deps = ["BitTwiddlingConvenienceFunctions", "IfElse", "Libdl", "Static"]
 git-tree-sha1 = "8e070b599339d622e9a081d17230d74a5c473293"
@@ -1308,6 +1340,18 @@ deps = ["Artifacts", "JLLWrappers", "Libdl"]
 git-tree-sha1 = "25ee0be4d43d0269027024d75a24c24d6c6e590c"
 uuid = "aacddb02-875f-59d6-b918-886e6ef4fbf8"
 version = "3.0.4+0"
+
+[[deps.JuMP]]
+deps = ["LinearAlgebra", "MacroTools", "MathOptInterface", "MutableArithmetics", "OrderedCollections", "PrecompileTools", "Printf", "SparseArrays"]
+git-tree-sha1 = "cac0ea273db1c9db803af8ee2921d0a3f5a193a4"
+uuid = "4076af6c-e467-56ae-b986-b466b2749572"
+version = "1.23.4"
+
+    [deps.JuMP.extensions]
+    JuMPDimensionalDataExt = "DimensionalData"
+
+    [deps.JuMP.weakdeps]
+    DimensionalData = "0703355e-b756-11e9-17c0-8b28908087d0"
 
 [[deps.JuliaFormatter]]
 deps = ["CSTParser", "CommonMark", "DataStructures", "Glob", "PrecompileTools", "TOML", "Tokenize"]
@@ -1645,6 +1689,12 @@ deps = ["Base64"]
 uuid = "d6f4376e-aef5-505a-96c1-9c027394607a"
 version = "1.11.0"
 
+[[deps.MathOptInterface]]
+deps = ["BenchmarkTools", "CodecBzip2", "CodecZlib", "DataStructures", "ForwardDiff", "JSON", "LinearAlgebra", "MutableArithmetics", "NaNMath", "OrderedCollections", "PrecompileTools", "Printf", "SparseArrays", "SpecialFunctions", "Test", "Unicode"]
+git-tree-sha1 = "e065ca5234f53fd6f920efaee4940627ad991fb4"
+uuid = "b8f27783-ece8-5eb3-8dc8-9495eed66fee"
+version = "1.34.0"
+
 [[deps.MathTeXEngine]]
 deps = ["AbstractTrees", "Automa", "DataStructures", "FreeTypeAbstraction", "GeometryBasics", "LaTeXStrings", "REPL", "RelocatableFolders", "UnicodeFun"]
 git-tree-sha1 = "e1641f32ae592e415e3dbae7f4a188b5316d4b62"
@@ -1687,6 +1737,12 @@ deps = ["DataAPI"]
 git-tree-sha1 = "ec4f7fbeab05d7747bdf98eb74d130a2a2ed298d"
 uuid = "e1d29d7a-bbdc-5cf2-9ac0-f12de2c33e28"
 version = "1.2.0"
+
+[[deps.MixedSubdivisions]]
+deps = ["LinearAlgebra", "MultivariatePolynomials", "ProgressMeter", "StaticArrays"]
+git-tree-sha1 = "8c6bb3edae13e0a3c5479baf23658384ac3576bd"
+uuid = "291d046c-3347-11e9-1e74-c3d251d406c6"
+version = "1.1.5"
 
 [[deps.Mmap]]
 uuid = "a63ad114-7e13-5084-954f-fe012c677804"
@@ -1902,12 +1958,10 @@ deps = ["Compat", "FillArrays", "ForwardDiff", "LineSearches", "LinearAlgebra", 
 git-tree-sha1 = "d9b79c4eed437421ac4285148fcadf42e0700e89"
 uuid = "429524aa-4258-5aef-a3af-852621145aeb"
 version = "1.9.4"
+weakdeps = ["MathOptInterface"]
 
     [deps.Optim.extensions]
     OptimMOIExt = "MathOptInterface"
-
-    [deps.Optim.weakdeps]
-    MathOptInterface = "b8f27783-ece8-5eb3-8dc8-9495eed66fee"
 
 [[deps.Opus_jll]]
 deps = ["Artifacts", "JLLWrappers", "Libdl"]
@@ -2237,6 +2291,11 @@ git-tree-sha1 = "e065263f7e818a419bdc89979d7196222bb70efb"
 uuid = "d720cf60-89b5-51f5-aff5-213f193123e7"
 version = "0.11.22"
 
+[[deps.PolynomialRoots]]
+git-tree-sha1 = "5f807b5345093487f733e520a1b7395ee9324825"
+uuid = "3a141323-8675-5d76-9d11-e1df1406c778"
+version = "1.0.0"
+
 [[deps.Polynomials]]
 deps = ["LinearAlgebra", "RecipesBase", "Requires", "Setfield", "SparseArrays"]
 git-tree-sha1 = "1a9cfb2dc2c2f1bd63f1906d72af39a79b49b736"
@@ -2289,6 +2348,10 @@ version = "0.5.6"
 [[deps.Printf]]
 deps = ["Unicode"]
 uuid = "de0858da-6303-5e67-8744-51eddeeeb8d7"
+version = "1.11.0"
+
+[[deps.Profile]]
+uuid = "9abbd945-dff8-562f-b5e8-e1ebf5ef1b79"
 version = "1.11.0"
 
 [[deps.ProgressMeter]]
@@ -2362,6 +2425,12 @@ weakdeps = ["FixedPointNumbers"]
 
     [deps.Ratios.extensions]
     RatiosFixedPointNumbersExt = "FixedPointNumbers"
+
+[[deps.ReactionNetworkImporters]]
+deps = ["Catalyst", "DataStructures", "ModelingToolkit", "SparseArrays", "Symbolics"]
+git-tree-sha1 = "cbabb1145cf2e3400c0923314cdc1df595d22f73"
+uuid = "b4db0fb7-de2a-5028-82bf-5021f5cfa881"
+version = "0.15.1"
 
 [[deps.Readline_jll]]
 deps = ["Artifacts", "JLLWrappers", "Libdl", "Ncurses_jll"]
@@ -2465,6 +2534,24 @@ git-tree-sha1 = "04c968137612c4a5629fa531334bb81ad5680f00"
 uuid = "7e49a35a-f44a-4d26-94aa-eba1b4ca6b47"
 version = "0.5.13"
 
+[[deps.SBML]]
+deps = ["DocStringExtensions", "IfElse", "Libdl", "SBML_jll", "SparseArrays", "Unitful"]
+git-tree-sha1 = "8bdb7ee0f1ad78a7de942951437412dd1c93e782"
+uuid = "e5567a89-2604-4b09-9718-f5f78e97c3bb"
+version = "1.5.1"
+
+[[deps.SBMLToolkit]]
+deps = ["Catalyst", "SBML", "SymbolicUtils"]
+git-tree-sha1 = "cb2c5061991d0dd6b0a90af9f507e0a0a7748708"
+uuid = "86080e66-c8ac-44c2-a1a0-9adaadfe4a4e"
+version = "0.1.29"
+
+[[deps.SBML_jll]]
+deps = ["Artifacts", "JLLWrappers", "Libdl", "XML2_jll", "Zlib_jll"]
+git-tree-sha1 = "7567084bd3defc697c168b8b0ab3d28a9bc47648"
+uuid = "bb12108a-f4ef-5f88-8ef3-0b33ff7017f1"
+version = "5.20.1+0"
+
 [[deps.SCIP_jll]]
 deps = ["Artifacts", "Bzip2_jll", "CompilerSupportLibraries_jll", "GMP_jll", "Ipopt_jll", "JLLWrappers", "Libdl", "Pkg", "Readline_jll", "Zlib_jll", "bliss_jll", "boost_jll"]
 git-tree-sha1 = "cf69186eb29307fbb2319b90e6133797bad983ce"
@@ -2497,6 +2584,12 @@ deps = ["Artifacts", "CompilerSupportLibraries_jll", "Hwloc_jll", "JLLWrappers",
 git-tree-sha1 = "11f3da4b25efacd1cec8e263421f2a9003a5e8e0"
 uuid = "319450e9-13b8-58e8-aa9f-8fd1420848ab"
 version = "2024.5.8+0"
+
+[[deps.Satisfiability]]
+deps = ["Logging"]
+git-tree-sha1 = "e507e51194f912ccb6f52e65286a70449cb7164c"
+uuid = "160ab843-0bc6-4ba4-9585-b7478b70f443"
+version = "0.1.1"
 
 [[deps.SciMLBase]]
 deps = ["ADTypes", "Accessors", "ArrayInterface", "CommonSolve", "ConstructionBase", "Distributed", "DocStringExtensions", "EnumX", "Expronicon", "FunctionWrappersWrappers", "IteratorInterfaceExtensions", "LinearAlgebra", "Logging", "Markdown", "PrecompileTools", "Preferences", "Printf", "RecipesBase", "RecursiveArrayTools", "Reexport", "RuntimeGeneratedFunctions", "SciMLOperators", "SciMLStructures", "StaticArraysCore", "Statistics", "SymbolicIndexingInterface"]
