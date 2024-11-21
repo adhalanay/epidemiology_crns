@@ -308,3 +308,5 @@ TSWLatexianTemp*
 .ipynb_checkpoints
 .vscode
 Untitled*
+.jupyter_ystore.db
+test.jl
