@@ -1,12 +1,4 @@
 [deps]
 Catalyst = "479239e8-5488-4da2-87a7-35f2df7eef83"
-CatalystNetworkAnalysis = "5fe4a9df-d2e2-44a6-8bda-0abe10269b5a"
-DifferentialEquations = "0c46a032-eb83-5123-abaf-570d42b7fbaa"
-Graphs = "86223c79-3864-5bf0-83f7-82e725a168b6"
 IJulia = "7073ff75-c697-5162-941a-fcdaad2a7d2a"
-Laplacians = "6f8e5838-0efe-5de0-80a3-5fb4f8dbb1de"
-Latexify = "23fbe1c1-3f47-55db-b15f-69d7ec21a316"
-Nemo = "2edaba10-b0f1-5616-af89-8c11ac63239a"
 Oscar = "f1435218-dba5-11e9-1e4d-f1a5fab5fc13"
-Symbolics = "0c5d862f-8b57-4792-8d23-62f2024744c7"
-WGLMakie = "276b4fcb-3e11-5398-bf8b-a0c2d153d008"
