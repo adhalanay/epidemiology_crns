@@ -1,7 +1,9 @@
 [deps]
 Catalyst = "479239e8-5488-4da2-87a7-35f2df7eef83"
 DelayDiffEq = "bcd4f6db-9728-5f36-b5f7-82caef46ccdb"
+DifferentialEquations = "0c46a032-eb83-5123-abaf-570d42b7fbaa"
 Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
 IJulia = "7073ff75-c697-5162-941a-fcdaad2a7d2a"
 Oscar = "f1435218-dba5-11e9-1e4d-f1a5fab5fc13"
 Symbolics = "0c5d862f-8b57-4792-8d23-62f2024744c7"
+WGLMakie = "276b4fcb-3e11-5398-bf8b-a0c2d153d008"
