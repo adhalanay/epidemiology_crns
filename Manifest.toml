@@ -2,7 +2,7 @@
 
 julia_version = "1.11.7"
 manifest_format = "2.0"
-project_hash = "ed80e7486ef830e1790f073bb37383c59a7f7a79"
+project_hash = "656bee2c0e18a58f295a11a017b171f3bb168a65"
 
 [[deps.ADTypes]]
 git-tree-sha1 = "27cecae79e5cc9935255f90c53bb831cc3c870d7"
@@ -2657,6 +2657,12 @@ deps = ["Base64", "Configurations", "Dates", "Downloads", "ExpressionExplorer", 
 git-tree-sha1 = "64ff678257a6e59364ac2c094642348104c17443"
 uuid = "c3e4b0f8-55cb-11ea-2926-15256bba5781"
 version = "0.20.18"
+
+[[deps.PlutoArticles]]
+deps = ["AbstractPlutoDingetjes", "HypertextLiteral", "InteractiveUtils", "Markdown", "Reexport"]
+git-tree-sha1 = "df61ed14959da1e0f6b8e25f63db5ab6ba071125"
+uuid = "f6bf48b7-86ff-4272-ae2d-6d953707ade4"
+version = "0.0.1"
 
 [[deps.PlutoDependencyExplorer]]
 deps = ["ExpressionExplorer", "InteractiveUtils", "Markdown"]
